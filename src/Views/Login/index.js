@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native"
+
 import {
   Container,
   Content,
@@ -9,6 +11,16 @@ import {
 } from "./styles"
 
 export const Login = () => {
+  const navigation = useNavigation()
+
+  const HandleLogin = () => {
+    return navigation.navigate("Home")
+  }
+
+  const HandleRegister = () => {
+    return navigation.navigate("Register")
+  }
+
   return (
     <Container>
       <Content>
@@ -18,7 +30,10 @@ export const Login = () => {
           <LoginInput />
         </ContainerInput>
         <ContentButton>
-          <ButtonText>Acessar</ButtonText>
+          <ButtonText onPress={HandleLogin}>Acessar</ButtonText>
+        </ContentButton>
+        <ContentButton size={25}>
+          <ButtonText onPress={HandleRegister}>Cadastrar</ButtonText>
         </ContentButton>
       </Content>
     </Container>

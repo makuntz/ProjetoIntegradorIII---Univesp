@@ -9,7 +9,7 @@ import {
 } from "./styles"
 
 export const SignIn = () => {
-  const navigation = useNavigation
+  const navigation = useNavigation()
 
   const HandleLogin = () => {
     return navigation.navigate("Login")

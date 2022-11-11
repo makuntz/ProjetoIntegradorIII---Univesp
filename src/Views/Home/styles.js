@@ -19,11 +19,11 @@ export const Content = styled.View`
   border-radius: 10px;
 `
 
-export const LoginLabel = styled.Text`
+export const HomeLabel = styled.Text`
   color: #e9482c;
   font-weight: bold;
-  margin: 0 0 20px 0;
-  font-size: 15px;
+  margin: 0 0 5px 0;
+  font-size: ${({ size }) => size || 15}px;
 `
 export const ContainerInput = styled.View`
   width: 300px;
@@ -33,7 +33,7 @@ export const ContainerInput = styled.View`
   justify-content: center;
 `
 
-export const LoginInput = styled(TextInput)`
+export const HomeInput = styled(TextInput)`
   width: 100%;
   height: 40px;
   border-radius: 10px;
@@ -51,11 +51,23 @@ export const ContentButton = styled.TouchableOpacity.attrs({
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: ${({ size }) => size || 100}px;
+  margin: 100px 0 0 0;
   background-color: #e9482c;
 `
 export const ButtonText = styled.Text`
-    color white;
-    font-weight: bold;
-    font-size: 17px;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+`
+export const ContentButtonLogout = styled.View`
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+`
+
+export const ButtonLogout = styled.Text`
+  color: white;
+  font-size: 17px;
+  margin: 10px 40px 0 0;
 `
